@@ -15,3 +15,4 @@ Once miniconda/forge3 is installed on your system use `conda` or `mamba` (faster
 The configuration for running docker using the pygeoapi image with a custom path to config and the local `data` directory is provided in `docker-compose.yml`.
 
 Run using `docker compose up` when in the base directory of the github repository.
+
