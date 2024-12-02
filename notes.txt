@@ -1,0 +1,59 @@
+Notes on pygeoapi for setup compiled before billing commenced.
+
+It's simple to pull the docker image. 
+
+You then need to provide reference to an external config file and any
+data stores
+
+In the case of this project you need to be able to boot the docker 
+referencing either the PostGIS or SQLite back end.
+
+docker run -p 5000:80 \
+-v $(pwd)/default.config.yml:/pygeoapi/local.config.yml \
+geopython/pygeoapi:latest
+
+This is using a custom config file. -v denotes the volumes.
+
+Cleaner than this is to use a docker compose YAML.
+
+$(pwd) indicates the working folder from which you start the container.
+
+YAML config file, e.g. default.config.yml
+Data are described under `resources`
+
+resources:
+    obs (can be anything, collection name):
+        type: collection
+        title:
+        description:
+        keywords:
+            - a
+            - b
+        linked-data:
+            context:
+                - datetime: schema, vocab, related info?
+
+        links:
+            type: text/csv,
+            rel: canonical
+            title: data
+            href: <url>
+            hreflang: en-US
+        extents:
+            spatial:
+                bbox: []
+                crs: <opengis.net/def/crs/OGC/ url>
+            temporal:
+                begin:
+                end:
+        providers:
+            - type: feature
+              name: CSV
+              data: <path>
+              id_field: id
+              geometry:
+                  x_field: long
+                  y_field: lat
+
+
+Dutch addresses - ogr_addresses_sqlite
