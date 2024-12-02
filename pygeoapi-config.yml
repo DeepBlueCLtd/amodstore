@@ -108,7 +108,7 @@ resources:
             # see Plugins section for more information
             - type: stac # underlying data geospatial type: (allowed values are: feature, coverage, record, tile, edr)
               name: FileSystem
-              data: /data  # required: the data filesystem path or URL, depending on plugin setup
+              data: /data # required: the data filesystem path or URL, depending on plugin setup
               file_types:
                   - .tif
               # editable transactions: DO NOT ACTIVATE unless you have setup access control beyond pygeoapi
