@@ -11,3 +11,4 @@ services:
     volumes:
       - ./pygeoapi-config.yml:/pygeoapi/local.config.yml
       - ./data:/data
+      - ./mock-data:/mock-data
