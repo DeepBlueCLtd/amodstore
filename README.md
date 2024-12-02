@@ -6,6 +6,7 @@ navigate to: `https://docs.anaconda.com/miniconda/install/` and follow the instr
 
 Once miniconda3 is installed on your system use `mamba` (faster `conda`) to create your local environment,
 `mamba create -n pygeoapi pygeoapi owslib jupyter numpy scipy pandas rasterio geopandas xarray rioxarray rtree` 
+
 `mamba activate pygeoapi`
 
 `mamba` and `conda` can be used interchangeably.
