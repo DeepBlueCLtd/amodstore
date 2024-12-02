@@ -83,10 +83,10 @@ resources:
         type: stac-collection  # REQUIRED (collection, process, or stac-collection)
         visibility: default  # OPTIONAL
         title: 1 degree tiles  # title of dataset
-        description: Global tiles at 1 degree # abstract of dataset
+        description: Some tiles at 1 degree # abstract of dataset
         keywords:  # list of related keywords
             - tiles
-            - global
+            - some
             - one
             - degree
         links:  # list of 1..n related links
@@ -97,7 +97,7 @@ resources:
               hreflang: en  # language
         extents:  # spatial and temporal extents
             spatial:  # required
-                bbox: [-180,-90,180,90]  # list of minx, miny, maxx, maxy
+                bbox: [-2,-2,2,2]  # list of minx, miny, maxx, maxy
                 crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84  # CRS
             temporal:  # optional
                 begin: 2000-01-01T00:00:01Z  # start datetime in RFC3339
